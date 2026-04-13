@@ -49,6 +49,7 @@ Lista las cosas que hará tu aplicación. Empieza por lo más simple.
 
 ## Diagrama de clases UML
 ```mermaid
+classDiagram
   class App{
     + main(args: String[]): void
   }
@@ -58,7 +59,7 @@ Lista las cosas que hará tu aplicación. Empieza por lo más simple.
   }
   class Palabra {
     - texto: String
-    - significados: List<Significado>
+    - significados: List~Significado~
     - fonetica: Fonetica
     + mostrar(): void
   }
@@ -70,11 +71,11 @@ Lista las cosas que hará tu aplicación. Empieza por lo más simple.
   }
   class Significado {
     - categoriaGramatical: String
-    - definiciones: List<Definicion>
+    - definiciones: List~Definicion~
   }
   class Definicion {
     - texto: String
-    - sinonimos: List<String>
+    - sinonimos: List~String~
   }
   class verResultados {
     + mostrarPalabra(palabra: Palabra): void
