@@ -1,5 +1,4 @@
-## Nombre del proyecto
-DictionaryApp
+## Proyecto: DictionaryApp
 
 ## Descripción
 Aplicación que, al introducir el usuario una palabra en inglés, se consulta la Free Dictionary API para 
