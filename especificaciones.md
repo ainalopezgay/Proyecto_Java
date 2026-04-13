@@ -90,53 +90,29 @@ classDiagram
 ## Ejemplo de respuesta JSON de la API
 
 ```json
-
 [
-
   {
-
     "word": "hello",
-
     "phonetic": "/həˈloʊ/",
-
     "phonetics": [
-
       {
-
         "text": "/həˈloʊ/",
-
         "audio": "https://api.dictionaryapi.dev/media/pronunciations/en/hello-us.mp3"
-
       }
-
     ],
-
     "meanings": [
-
       {
-
         "partOfSpeech": "exclamation",
-
         "definitions": [
-
           {
-
             "definition": "Used as a greeting or to begin a phone conversation.",
-
             "synonyms": ["hi", "hey", "greetings"]
-
           }
-
         ]
-
       }
-
     ]
-
   }
-
 ]
-
 ```
  
 
