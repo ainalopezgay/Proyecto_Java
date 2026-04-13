@@ -2,9 +2,9 @@
 DictionaryApp
 
 ## Descripción
-Se trata de una aplicación que, al introducir el usuario una palabra en inglés, se consulta la Free Dictionary API para 
+Aplicación que, al introducir el usuario una palabra en inglés, se consulta la Free Dictionary API para 
 devolver su significado, pronunciación fonética y sinónimos.
-Esta aplicación puede ser útil para estudiantes de idiomas, o como acceso rápido a un diccionario.
+Esta aplicación puede ser útil para estudiantes de idiomas o para cualquier persona que necesite acceso rápido a un diccionario.
 
 ## API utilizada
 | Campo | Detalle |
@@ -20,7 +20,7 @@ Esta aplicación puede ser útil para estudiantes de idiomas, o como acceso ráp
 
 | Endpoint | Descripción | Ejemplo de llamada |
 |---|---|---|
-|  | Devuelve información completa de una palabra | https://api.dictionaryapi.dev/api/v2/entries/en/hello |
+| /api/v2/entries/en/{word} | Devuelve información completa de una palabra | https://api.dictionaryapi.dev/api/v2/entries/en/hello |
 
 
 ## Funcionalidades principales
@@ -37,7 +37,13 @@ Lista las cosas que hará tu aplicación. Empieza por lo más simple.
 
 | Clase | Responsabilidad |
 |---|---|
-| BuscadorDiccionario | Qué representa o hace |
+| App | Recibe input del usuario |
+| BuscadorDiccionario | Llama a la API y devuelve un objeto Palabra |
+| Palabra | Representa la palabra con su fonética y sus significados |
+| Significado | Contiene la lista de significados de la palabra |
+| Fonética | Almacena la transcripción fonética y los enlaces para los audios de pronunciación |
+| Definicion | Almacena el texto de la definición y los sinónimos |
+| VerResultado | Muestra en pantalla todos los resultados obtenidos |
 
 ---
 
