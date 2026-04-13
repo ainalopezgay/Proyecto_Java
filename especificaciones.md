@@ -43,7 +43,7 @@ Lista las cosas que hará tu aplicación. Empieza por lo más simple.
 | `Significado` | Contiene la lista de significados de la palabra y su categoría gramatical |
 | `Fonética` | Almacena la transcripción fonética y los enlaces para los audios de pronunciación |
 | `Definicion` | Almacena el texto de la definición y los sinónimos |
-| `VerResultado` | Muestra en pantalla todos los resultados obtenidos |
+| `VisorResultado` | Muestra en pantalla todos los resultados obtenidos |
 
 ---
 
@@ -61,7 +61,6 @@ classDiagram
     - texto: String
     - significados: List~Significado~
     - fonetica: Fonetica
-    + mostrar(): void
   }
   class Fonetica {
     - transcripcion: String
@@ -77,7 +76,7 @@ classDiagram
     - texto: String
     - sinonimos: List~String~
   }
-  class verResultados {
+  class VisorResultados {
     + mostrarPalabra(palabra: Palabra): void
     + mostrarError(mensaje: String): void
   }
@@ -85,8 +84,8 @@ classDiagram
   App --> VisorResultados : usa
   BuscadorDiccionario --> Palabra : crea
   Palabra "1" *-- "1" Fonetica : contiene
-  Palabra "1" *-- "1." Significado : contiene
-  Significado "1" *-- "1." Definicion : contiene
+  Palabra "1" *-- "1.." Significado : contiene
+  Significado "1" *-- "1.." Definicion : contiene
 ```
 
 ## Ejemplo de respuesta JSON de la API
