@@ -48,47 +48,47 @@ Lista las cosas que hará tu aplicación. Empieza por lo más simple.
 ---
 
 ## Diagrama de clases UML
-
-@startuml
-class App{
-  + main(args: String[]): void
-}
-class BuscadorDiccionario {
-  - urlBase: String
-  + buscar(palabra: String): Palabra
-}
-class Palabra {
-  - tecto: String
-  - significados: List<Significado>
-  - fonetica: Fonetica
-  + mostrar(): void
-}
-class Fonetica {
-  - transcripcion: String
-  - audioUrl: String
-  + getTranscripcion(): String
-  + getAudioUrl(): String
-}
-class Significado {
-  - categoriaGramatical: String
-  - definiciones: List<Definicion>
-}
-class Definicion {
-  - texto: String
-  - sinonimos: List<String>
-}
-class verResultados {
-  + mostrarPalabra(palabra: Palabra): void
-  + mostrarError(mensaje: String): void
-}
-App --> BuscadorDiccionario
-App --> VisorResultados
-BuscadorDiccionario --> Palabra
-Palabra "1" *-- "1" Fonetica
-Palabra "1" *-- "1." Significado
-Significado "1" *-- "1." Definicion
-@enduml
-
+```mermaid
+  @startuml
+  class App{
+    + main(args: String[]): void
+  }
+  class BuscadorDiccionario {
+    - urlBase: String
+    + buscar(palabra: String): Palabra
+  }
+  class Palabra {
+    - texto: String
+    - significados: List<Significado>
+    - fonetica: Fonetica
+    + mostrar(): void
+  }
+  class Fonetica {
+    - transcripcion: String
+    - audioUrl: String
+    + getTranscripcion(): String
+    + getAudioUrl(): String
+  }
+  class Significado {
+    - categoriaGramatical: String
+    - definiciones: List<Definicion>
+  }
+  class Definicion {
+    - texto: String
+    - sinonimos: List<String>
+  }
+  class verResultados {
+    + mostrarPalabra(palabra: Palabra): void
+    + mostrarError(mensaje: String): void
+  }
+  App --> BuscadorDiccionario
+  App --> VisorResultados
+  BuscadorDiccionario --> Palabra
+  Palabra "1" *-- "1" Fonetica
+  Palabra "1" *-- "1." Significado
+  Significado "1" *-- "1." Definicion
+  @enduml
+```
 
 ## Ejemplo de respuesta JSON de la API
 
