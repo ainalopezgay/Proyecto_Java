@@ -81,12 +81,12 @@ classDiagram
     + mostrarPalabra(palabra: Palabra): void
     + mostrarError(mensaje: String): void
   }
-  App --> BuscadorDiccionario
-  App --> VisorResultados
-  BuscadorDiccionario --> Palabra
-  Palabra "1" *-- "1" Fonetica
-  Palabra "1" *-- "1." Significado
-  Significado "1" *-- "1." Definicion
+  App --> BuscadorDiccionario : usa
+  App --> VisorResultados : usa
+  BuscadorDiccionario --> Palabra : crea
+  Palabra "1" *-- "1" Fonetica : contiene
+  Palabra "1" *-- "1." Significado : contiene
+  Significado "1" *-- "1." Definicion : contiene
 ```
 
 ## Ejemplo de respuesta JSON de la API
