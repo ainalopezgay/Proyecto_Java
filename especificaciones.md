@@ -49,7 +49,6 @@ Lista las cosas que hará tu aplicación. Empieza por lo más simple.
 
 ## Diagrama de clases UML
 ```mermaid
-  @startuml
   class App{
     + main(args: String[]): void
   }
@@ -87,7 +86,6 @@ Lista las cosas que hará tu aplicación. Empieza por lo más simple.
   Palabra "1" *-- "1" Fonetica
   Palabra "1" *-- "1." Significado
   Significado "1" *-- "1." Definicion
-  @enduml
 ```
 
 ## Ejemplo de respuesta JSON de la API
