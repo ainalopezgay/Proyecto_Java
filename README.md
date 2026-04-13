@@ -1,2 +1,4 @@
 # Proyecto_Java
-Proyecto de Java a desarrollar durante el curso
+
+# Aplicación Diccionario
+En este proyecto, vamos a diseñar una aplicación en Java que funcione como un diccionario accesible en inglés. Cuando se introduzca una palabra, se obtendrá su definición, pronunciación fonética y algunos sinónimos.
