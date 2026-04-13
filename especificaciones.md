@@ -49,9 +49,20 @@ Lista las cosas que hará tu aplicación. Empieza por lo más simple.
 
 ## Diagrama de clases UML
 
-*(Inserta aquí la imagen o el diagrama en texto)*
+@startuml
+class App{
+  + main(args: String[]): void
+}
+class BuscadorDiccionario {
+  - urlBase: String
+  + buscar(palabra: String): Palabra
+}
+class Palabra {
+  - tecto: String
+  - significados: List<Significado>
+  - fonetica: Fonetica
+  + mostrar(): void
 
----
 
 ## Ejemplo de respuesta JSON de la API
 
