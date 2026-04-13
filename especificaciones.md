@@ -19,7 +19,7 @@ Esta aplicación puede ser útil para estudiantes de idiomas o para cualquier pe
 
 | Endpoint | Descripción | Ejemplo de llamada |
 |---|---|---|
-| /api/v2/entries/en/{word} | Devuelve información completa de una palabra | https://api.dictionaryapi.dev/api/v2/entries/en/hello |
+| `/api/v2/entries/en/{word}` | Devuelve información completa de una palabra | https://api.dictionaryapi.dev/api/v2/entries/en/hello |
 
 
 ## Funcionalidades principales
