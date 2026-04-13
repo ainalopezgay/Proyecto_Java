@@ -40,7 +40,7 @@ Lista las cosas que hará tu aplicación. Empieza por lo más simple.
 | App | Recibe input del usuario |
 | BuscadorDiccionario | Llama a la API y devuelve un objeto Palabra |
 | Palabra | Representa la palabra con su fonética y sus significados |
-| Significado | Contiene la lista de significados de la palabra |
+| Significado | Contiene la lista de significados de la palabra y su categoría gramatical |
 | Fonética | Almacena la transcripción fonética y los enlaces para los audios de pronunciación |
 | Definicion | Almacena el texto de la definición y los sinónimos |
 | VerResultado | Muestra en pantalla todos los resultados obtenidos |
@@ -62,6 +62,32 @@ class Palabra {
   - significados: List<Significado>
   - fonetica: Fonetica
   + mostrar(): void
+}
+class Fonetica {
+  - transcripcion: String
+  - audioUrl: String
+  + getTranscripcion(): String
+  + getAudioUrl(): String
+}
+class Significado {
+  - categoriaGramatical: String
+  - definiciones: List<Definicion>
+}
+class Definicion {
+  - texto: String
+  - sinonimos: List<String>
+}
+class verResultados {
+  + mostrarPalabra(palabra: Palabra): void
+  + mostrarError(mensaje: String): void
+}
+App --> BuscadorDiccionario
+App --> VisorResultados
+BuscadorDiccionario --> Palabra
+Palabra "1" *-- "1" Fonetica
+Palabra "1" *-- "1." Significado
+Significado "1" *-- "1." Definicion
+@enduml
 
 
 ## Ejemplo de respuesta JSON de la API
