@@ -22,4 +22,9 @@ public class Palabra {
     public Fonetica getFonetica() {
         return fonetica;
     }
+
+    // Para comprobar que la palabra tenga todos los datos posibles
+    public boolean tiene InformacionCompleta() {
+        return.this.fonetica != null && this.significados != null && !this.significados.isEmpty();
+    }
 }
