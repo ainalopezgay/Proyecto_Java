@@ -4,6 +4,7 @@
 Aplicación que, al introducir el usuario una palabra en inglés, se consulta la Free Dictionary API para 
 devolver su significado, pronunciación fonética y sinónimos.
 Esta aplicación puede ser útil para estudiantes de idiomas o para cualquier persona que necesite acceso rápido a un diccionario.
+Una vez introducida la palabra, se mostrará por pantalla la información disponible sobre ella (puede que no sea completa), y se preguntará al usuario qué información desea consultar.
 
 ## API utilizada
 | Campo | Detalle |
