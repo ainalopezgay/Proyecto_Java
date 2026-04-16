@@ -58,7 +58,7 @@ public class VisorResultados {y
                 System.out.println("(" + sig.getCategoriaGramatical().toUpperCase() + ")");
                 sig.ordenarDefinicionesAlfabeticamente();
 
-                for(Definicion def : sig.getCategoriaGramatical()) {
+                for(Definicion def : sig.getDefiniciones()) {
                     System.out.println(def);
                 }
             }
@@ -72,7 +72,7 @@ public class VisorResultados {y
             System.out.println("===================================================");
         }
 
-        private void mostrarError(String mensaje) {
+        peivate void mostrarError(String mensaje) {
             System.out.println("Error: " + mensaje);
         }
     }
