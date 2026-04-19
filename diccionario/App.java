@@ -17,7 +17,6 @@ public class App {
                 System.out.println("Fin del programa");
                 break;
             }
-
             if (input.isEmpty()) {
                 visor.mostrarError("Escriba una palabra válida");
                 continue;

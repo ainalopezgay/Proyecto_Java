@@ -2,6 +2,7 @@ public class VisorResultados {
     private static VisorResultados instanciaUnica;
     private VisorResultados() {
     }
+    
     // Para tener la única pantalla disponible
     public static VisorResultados getInstance() {
         if (instanciaUnica == null) {
