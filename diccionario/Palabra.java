@@ -24,7 +24,7 @@ public class Palabra {
     }
 
     // Para comprobar que la palabra tenga todos los datos posibles
-    public boolean tiene InformacionCompleta() {
+    public boolean tieneInformacionCompleta() {
         return.this.fonetica != null && this.significados != null && !this.significados.isEmpty();
     }
 }

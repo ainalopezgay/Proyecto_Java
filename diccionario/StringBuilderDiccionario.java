@@ -44,5 +44,6 @@ public class StringBuilderDiccionario {
                 }
             }
         }
+        return sb.toString();
     }
 }
